@@ -1,0 +1,45 @@
+files:
+  evidence: evidence.txt
+  keys: keys.txt
+  contrasts: contrast.txt
+  summary: summary.txt
+  output: proteomics/results.txt
+qc:
+  basic: 1
+  extended: 1
+  extendedSummary: 1
+data:
+  enabled: 1
+  fractions:
+    enabled: 0
+  silac:
+    enabled: 0
+  filters:
+    enabled: 1
+    contaminants: 1
+    protein_groups: remove
+    modifications: AB
+  sample_plots: 1
+msstats:
+  enabled: 1
+  msstats_input: ~
+  profilePlots: none
+  normalization_method: equalizeMedians
+  normalization_reference: ~
+  summaryMethod: TMP
+  censoredInt: NA
+  cutoffCensored: minFeature
+  MBimpute: 1
+  feature_subset: all
+output_extras:
+  enabled: 1
+  annotate:
+    enabled: 1
+    species: HUMAN
+  plots:
+    volcano: 1
+    heatmap: 1
+    LFC: -0.58 0.58
+    FDR: 0.05
+    heatmap_cluster_cols: 0
+    heatmap_display: log2FC
